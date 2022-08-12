@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="Calculator.css" type="text/css">
+</head>
+<body>
+    <div class="total">
+        <form name="container">
+            <input type="text" name="topdisplay" id="topdisplay" readonly>
+            <input type="text" name="display" id="display" placeholder="0" readonly>
+            <br>
+            <div class="button-box">
+                <input type="button" class="btn" value="7" onclick="check('7'),checkNumebr()">
+                <input type="button" class="btn" value="8" onclick="check('8'),checkNumebr()">
+                <input type="button" class="btn" value="9" onclick="check('9'),checkNumebr()">
+                <input type="button" class="btn mbtn" value="+" onclick="checkIndex('+')">
+                <br>
+                <input type="button" class="btn" value="4" onclick="check('4'),checkNumebr()">
+                <input type="button" class="btn" value="5" onclick="check('5'),checkNumebr()">
+                <input type="button" class="btn" value="6" onclick="check('6'),checkNumebr()">
+                <input type="button" class="btn mbtn" value="-" onclick="checkIndex('-')">
+                <br>
+                <input type="button" class="btn" value="1" onclick="check('1'),checkNumebr()">
+                <input type="button" class="btn" value="2" onclick="check('2'),checkNumebr()">
+                <input type="button" class="btn" value="3" onclick="check('3'),checkNumebr()">
+                <input type="button" class="btn mbtn" value="×" onclick="checkIndex('*')">
+                <br>
+                <input type="button" class="btn cbtn" value="C" onclick="container.display.value ='',container.topdisplay.value =''">
+                <input type="button" class="btn" value="0" onclick="check('0'),checkNumebr()">
+                <input type="button" class="btn mbtn" value="÷" onclick="checkIndex('/')">
+                <input type="button" class="btn mbtn" value="=" onclick="Tresult()">
+            </div>
+        </form>
+    </div>
+    <audio id="mp" src="buttonSound.mp3" autoplap="false"></audio>
+    <script src="Calculator.js"></script>
+</body>
+</html>
