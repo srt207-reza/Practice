@@ -1,0 +1,275 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+body {
+    transition: 0.5s;
+    animation: GradientBackground 10s infinite ;
+    direction: rtl;
+}
+
+.container {
+    display: flex;
+    width: 70%;
+    height: 60rem;
+    background-color: rgb(247, 30, 30);
+    border-radius: 1.5rem;
+    outline: 2px dotted #000;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: 0.5s;
+    animation: ContainerShadow 10s infinite;
+    justify-content: space-between;
+}
+
+.make-todoList {
+    width: 25%;
+    height: 55%;
+    border-radius: 1.5rem;
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.make-todoList .todoList {
+    margin: 19px;
+    font-size: larger;
+    font-weight: 700;
+    color: #fff;
+}
+
+.make-todoList .input-todoList-name {
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 4px 10px;
+    margin: 0 auto;
+    font-size: medium;
+    font-weight: 600;
+    direction: ltr;
+}
+
+.make-todoList .input-todoList-info {
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 4px 10px;
+    margin: 0 auto;
+    font-size: medium;
+    font-weight: 600;
+    direction: ltr;
+}
+
+.ul-todoList-result {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.todoList-result {
+    width: 90%;
+    height: 2.2rem;
+    list-style-type: none;
+    font-size: medium;
+    text-align: center;
+    padding: .2rem;
+    box-sizing: border-box;
+    margin: 1.1rem auto;
+    font-weight: 600;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+.list-result {
+    width: 90%;
+    height: 2.2rem;
+    list-style-type: none;
+    font-size: medium;
+    text-align: center;
+    padding: .2rem;
+    box-sizing: border-box;
+    margin: 1.1rem auto;
+    font-weight: 600;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+.todoList-result:hover {
+    background-color: aqua;
+}
+
+.import-list {
+    border: 2px solid #000;
+    height: 100%;
+    border-radius: 1.5rem;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-import-list {
+    border: 2px solid #000;
+    height: 100%;
+    border-radius: 1.5rem;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.import-items , .not-import-items {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.import-title {
+    margin-top: 0;
+    border: 2px solid #000;
+    font-size: medium;
+    font-weight: 600;
+    background-color: yellow;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+
+}
+
+.not-import-title {
+    margin-top: 0;
+    border: 2px solid #000;
+    font-size: medium;
+    font-weight: 600;
+    background-color: rgb(36, 219, 36);
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+    width: 20%;
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    box-shadow: 0 0 100px 1px #000;
+    direction: ltr;
+}
+
+.modal-close {
+    color: #000;
+    direction: rtl;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-title,
+.modal-time,
+.modal-info {
+    background-color: #FF5722;
+    margin: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: normal;
+    border: 2px solid #FF3D00;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 1px #C62828;
+}
+
+.pickTime {
+    width: 90%;
+    height: 2.2rem;    
+    font-size: medium;
+    text-align: center;
+    padding: .2rem;
+    box-sizing: border-box;
+    margin: 1.1rem auto;
+    font-weight: 600;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+}
+
+@keyframes ContainerShadow {
+    from {
+        box-shadow: 0px 5px 15px #000;
+    }
+
+        10% {box-shadow: 0px 2px 10px #000;}
+        20% {box-shadow: 0px 5px 15px #000;}
+        30% {box-shadow: 0px 2px 10px #000;}
+        40% {box-shadow: 0px 5px 15px #000;}
+        50% {box-shadow: 0px 2px 10px #000;}
+        60% {box-shadow: 0px 5px 15px #000;}
+        70% {box-shadow: 0px 2px 10px #000;}
+        80% {box-shadow: 0px 5px 15px #000;}
+        90% {box-shadow: 0px 2px 10px #000;}
+
+    to {
+        box-shadow: 0px 5px 15px #000;
+    }
+}
+
+@keyframes GradientBackground {
+    from {
+        background-color: #ccc;
+    }
+
+    10% {background-color: #ecf;}
+    20% {background-color: #ccc;}
+    30% {background-color: #ecf;}
+    40% {background-color: #ccc;}
+    50% {background-color: #ecf;}
+    60% {background-color: #ccc;}
+    70% {background-color: #ecf;}
+    80% {background-color: #ccc;}
+    90% {background-color: #ecf;}
+
+    to {
+        background-color: #ccc;
+    }
+}
